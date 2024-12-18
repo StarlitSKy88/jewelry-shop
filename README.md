@@ -45,12 +45,15 @@
 
 ## 功能特点
 
+### 用户体验
 - 响应式设计，支持多设备访问
 - 性能优化
   - 组件懒加载
   - 图片优化
   - 虚拟滚动
   - 性能监控
+
+### 产品功能
 - 产品展示和搜索
   - 产品分类浏览
   - 高级筛选功能
@@ -105,28 +108,25 @@
 
 ## 开发指南
 
-### 目录结构说明
+### 目录结构
 ```
 ├── client                 # 前端代码
 │   ├── public            # 静态资源
 │   └── src               # 源代码
 │       ├── components    # 公共组件
-│       │   ├── Layout    # ���局组件
-│       │   ├── Home      # 首页组件
-│       │   └── Products  # 产品相关组件
 │       ├── pages         # 页面组件
 │       ├── store         # Redux状态管理
 │       ├── hooks         # 自定义Hook
 │       ├── utils         # 工具函数
 │       └── theme         # 主题配置
 ├── server                # 后端代码
-│   ├── controllers       # 控制器
-│   ├── models           # 数据模型
-│   ├── routes           # 路由
-│   ├── middleware       # 中间件
-│   ├── tests            # 测试文件
-│   ├── monitoring       # 监控配置
-│   ├── docs             # API文档
+│   ├── controllers      # 控制器
+│   ├── models          # 数据模型
+│   ├── routes          # 路由
+│   ├── middleware      # 中间件
+│   ├── tests           # 测试文件
+│   ├── monitoring      # 监控配置
+│   └── docs            # API文档
 └── docs                 # 项目文档
 ```
 
@@ -151,12 +151,10 @@ npm install
 # 后端配置
 cd server
 cp .env.example .env
-# 编辑.env文件，配置必要的环境变量
 
 # 前端配置
 cd ../client
 cp .env.example .env
-# 编辑.env文件，配置必要的环境变量
 ```
 
 3. 启动开发服务器
@@ -170,9 +168,9 @@ cd ../client
 npm run dev
 ```
 
-### 测试
+## 测试
 
-1. 单元测试
+### 运行测试
 ```bash
 # 运行前端测试
 cd client
@@ -181,17 +179,22 @@ npm test
 # 运行后端测试
 cd server
 npm test
-```
 
-2. E2E测试
-```bash
 # 运行E2E测试
 cd client
 npm run test:e2e
 ```
 
-### 构建和部署
+## 部署
 
+### 部署环境
+- 前端：GitHub Pages / Vercel
+- 后端：Render / Heroku
+- 数据库：MongoDB Atlas
+- 缓存：Redis Labs
+- 文件存储：AWS S3
+
+### 部署步骤
 1. 构建前端
 ```bash
 cd client
@@ -199,39 +202,15 @@ npm run build
 ```
 
 2. 部署
-- 前端部署到Vercel：
-  ```bash
-  vercel deploy
-  ```
-- 后端部署到Render：
-  ```bash
-  git push render main
-  ```
+```bash
+# 前端部署到Vercel
+vercel deploy
 
-### 代码规范
-
-- 使用ESLint进行代码检查
-- 使用Prettier进行代码格式化
-- 遵循组件命名规范
-- 使用TypeScript类型检查
-
-### 版本控制
-
-- 使用语义化版本号
-- 遵循Git Flow工作流
-- 提交信息遵循约定式提交规范
-
-## 部署
-
-项目使用以下服务进行部署：
-- 前端：GitHub Pages / Vercel
-- 后端：Render / Heroku
-- 数据库：MongoDB Atlas
-- 缓存：Redis Labs
-- 文件存储：AWS S3
+# 后端部署到Render
+git push render main
+```
 
 ### 部署检查清单
-
 - [ ] 环境变量配置
 - [ ] 数据库连接
 - [ ] Redis连接
@@ -242,105 +221,18 @@ npm run build
 - [ ] 错误追踪
 - [ ] 备份策略
 
-### 性能优化
-
-- [ ] 图片优化和CDN
-- [ ] 代码分割
-- [ ] 路由懒加载
-- [ ] 缓存策略
-- [ ] 服务端渲染
-
 ## 环境要求
-
 - Node.js >= 18
 - MongoDB >= 5.0
 - Redis >= 6.0
 
-## 本地开发
-
-1. 克隆仓库
-```bash
-git clone [repository-url]
-```
-
-2. 环境配置
-```bash
-# 复制环境变量文件
-cp .env.example .env
-# 配置必要的环变量
-```
-
-3. 安装依赖
-```bash
-# 安装后端依赖
-cd server
-npm install
-
-# 安装前端依赖
-cd ../client
-npm install
-```
-
-4. 启动开发服务器
-```bash
-# 启动后端服务器
-cd server
-npm run dev
-
-# 启动前端开发服务器
-cd ../client
-npm run dev
-```
-
-## 项目结构
-```
-├── client                 # 前端代码
-│   ├── public            # 静态资源
-│   └── src               # 源代码
-│       ├── components    # 公共组件
-│       │   ├── Layout    # 布局组件
-│       │   ├── Home      # 首页组件
-│       │   └── Products  # 产品相关组件
-│       ├── pages         # 页面组件
-│       │   ├── Home      # 首页
-│       │   ├── Products  # 产品列表页
-│       │   └── ProductDetail # 产品详情页
-│       ├── theme         # 主题配置
-│       ├── utils         # 工具函数
-│       ├── hooks         # 自定义钩子
-│       └── store         # 状态管理
-├── server                # 后端代码
-│   ├── controllers       # 控制器
-│   ├── models           # 数据模型
-│   ├── routes           # 路由
-│   ├── middleware       # 中间件
-│   ├── tests            # 测试文件
-│   ├── monitoring       # 监控配置
-│   ├── docs             # API文档
-└── docs                 # 项目文档
-```
-
 ## API 文档
-
-API 文档使用 Swagger 生成，可在开发环境下访问：
+API 文档使用 Swagger 生成，开发环境访问地址：
 ```
 http://localhost:3000/api-docs
 ```
 
-## 测试
-
-```bash
-# 运行前端测试
-cd client
-npm test
-
-# 运行后端测试
-cd server
-npm test
-```
-
 ## 贡献指南
-
 1. Fork 项目
 2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
 3. 提交改动 (`git commit -m 'Add some AmazingFeature'`)
@@ -348,9 +240,7 @@ npm test
 5. 提交 Pull Request
 
 ## 许可证
-
 MIT
 
 ## 联系方式
-
-如有问题或建议，请提交 Issue 或联系项目维护者。 
+如有问题或建议，请提交 Issue 或联系项目维护者。
