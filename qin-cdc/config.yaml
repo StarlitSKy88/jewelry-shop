@@ -1,0 +1,29 @@
+name: mysql2mysql
+version: 1.0.0
+
+input:
+  plugin: mysql
+  name: mysql-source
+  config:
+    host: mysql.sqlpub.com
+    port: 3306
+    username: dianshang
+    password: bU8xhiTcnRzalKAT
+    database: dianshang
+    server_id: 1001
+    flavor: mysql
+    charset: utf8mb4
+
+output:
+  plugin: mysql
+  name: mysql-target
+  config:
+    host: localhost
+    port: 3306
+    username: root
+    password: root
+    database: jewelry_shop_local
+
+metrics:
+  enable: true
+  port: 9100 

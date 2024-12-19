@@ -1,3 +1,5 @@
+USE dianshang;
+
 -- 插入测试用户
 INSERT INTO users (username, email, password, role) VALUES
 ('测试用户', 'test@example.com', '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewYpfQN2YW3qy5MW', 'user'), -- 密码: 123456

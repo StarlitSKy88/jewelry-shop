@@ -1,0 +1,19 @@
+[source]
+type = "mysql"
+host = "127.0.0.1"
+port = 3306
+username = "root"
+password = "123456"
+database = "dianshang"
+
+[destination]
+type = "mysql"
+host = "mysql.sqlpub.com"
+port = 3306
+username = "dianshang"
+password = "bU8xhiTcnRzalKAT"
+database = "dianshang"
+
+[task]
+name = "mysql-to-sqlpub"
+source_includes = [".*"] 
