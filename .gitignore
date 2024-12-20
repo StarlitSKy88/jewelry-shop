@@ -1,37 +1,4 @@
-# Dependencies
 node_modules/
-**/node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment
-.env
-.env.local
-.env.development
-.env.test
-.env.production
-**/.env
-**/.env.*
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Logs
-logs/
-*.log
-
-# Build
 dist/
-build/
-coverage/
-**/dist/
-**/build/
-**/coverage/
-
-# OS
+.env
 .DS_Store
-Thumbs.db 
